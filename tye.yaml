@@ -1,0 +1,36 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+# define global settings here
+name: Store-API # application name
+# registry: exampleuser # dockerhub username or container registry hostname
+
+ingress:
+- name: ingress
+  bindings:
+    - port: 8080
+  rules:
+    - path: /
+      service: sessions-api
+    - path: /checkout-api
+      service: checkout-api
+
+# define multiple services here
+services:
+- name: sessions-api
+  executable: dapr  # path to an executable (relative to this file)
+  args: run --app-id sessions-app --app-port %PORT% --dapr-http-port 3502 -- python3 api.py # arguments to pass to the process
+  # replicas: 5 # number of times to launch the application
+  workingDirectory: ./sessions
+  bindings: # optional array of bindings (ports, connection strings)
+  - protocol: http
+- name: checkout-api
+  executable: dapr  # path to an executable (relative to this file)
+  args: run --app-id checkout-app --app-port %PORT% --dapr-http-port 3503  -- python3 api.py # arguments to pass to the process
+  # replicas: 5 # number of times to launch the application
+  workingDirectory: ./checkout-service
+  bindings: # optional array of bindings (ports, connection strings)
+  - protocol: http

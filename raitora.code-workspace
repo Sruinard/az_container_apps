@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "management_plane"
+		},
+		{
+			"path": "sessions"
+		}
+	],
+	"settings": {}
+}
