@@ -17,3 +17,10 @@ to run this example locally:
 container-envs.sh contains logic for running/updating azure container apps.
 
 
+usefull resources:
+
+https://blog.johnnyreilly.com/2022/01/22/azure-container-apps-dapr-bicep-github-actions-debug-devcontainer
+
+https://github.com/Azure-Samples/container-apps-store-api-microservice
+
+
