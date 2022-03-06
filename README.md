@@ -24,3 +24,7 @@ https://blog.johnnyreilly.com/2022/01/22/azure-container-apps-dapr-bicep-github-
 https://github.com/Azure-Samples/container-apps-store-api-microservice
 
 
+To work, configure Azure Container Apps in the following way:
+- Internal applications should have their DAPR APP Port set to the same port number as the application app port. Otherwise your application won't start.
+- There can only be one application with external ingress configured AND using DAPR for service invocation. This application should have the DAPR PORT set to 3500 and the application port to a port that is NOT equal to 3500.
+
