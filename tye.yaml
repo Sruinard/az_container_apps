@@ -34,3 +34,10 @@ services:
   workingDirectory: ./checkout-service
   bindings: # optional array of bindings (ports, connection strings)
   - protocol: http
+- name: customer-api
+  executable: dapr  # path to an executable (relative to this file)
+  args: run --app-id customer-app --app-port %PORT% --dapr-http-port 3504  -- python3 api.py # arguments to pass to the process
+  # replicas: 5 # number of times to launch the application
+  workingDirectory: ./profile
+  bindings: # optional array of bindings (ports, connection strings)
+  - protocol: http

@@ -11,8 +11,8 @@ import logging
 logger = logging.getLogger()
 logging.basicConfig(level=logging.WARNING)
 
-DAPR_APP_PORT =  os.environ.get("DAPR_HTTP_PORT", 3502)
-APP_PORT = os.getenv("CONTAINER_APP_PORT", 3000)
+DAPR_APP_PORT = os.environ.get("DAPR_HTTP_PORT", 3504)
+APP_PORT = os.getenv("CONTAINER_APP_PORT", 4000)
 if os.getenv("PORT"):
     APP_PORT = os.getenv("PORT")
 
@@ -49,40 +49,20 @@ app.add_middleware(
 
 @app.get("/")
 def homepage():
-    return "The sessions API responsible for booking a session."
+    return "the customer api"
 
 @app.get("/info")
-def sessions_info():
-    session_data = {
+def checkout_info():
+    checkout_data = {
         "app-port": APP_PORT,
         "dapr-port": DAPR_APP_PORT
 
     }
-    return session_data, os.environ
+    return checkout_data, os.environ
 
-@app.get("/sessions")
+@app.get("/customers")
 def create_sessions():
-    return [{"session_id": "123", "location": "Utrecht", "type": "CCS"}]
-
-@app.get("/payments")
-def obtain_available_chargers():
-    res = requests.get("http://localhost:{}/v1.0/invoke/checkout-app/method/checkouts".format(DAPR_APP_PORT))
-    return res.json()
-
-@app.get("/payments-headers")
-def obtain_available_chargers():
-    res = requests.get("http://localhost:{}/checkouts".format(DAPR_APP_PORT), headers={"dapr-app-id": "checkout-app"})
-    return res.json()
-
-@app.get("/payments-headers-post")
-def obtain_available_chargers():
-    res = requests.post("http://localhost:{}/checkouts".format(DAPR_APP_PORT), headers={"dapr-app-id": "checkout-app"})
-    return res.json()
-
-@app.get("/sessions_to_checkout_to_profile")
-def obtain_available_chargers():
-    res = requests.get("http://localhost:{}/checkout-profile".format(DAPR_APP_PORT), headers={"dapr-app-id": "checkout-app"})
-    return res.json()
+    return [{"customer_id": "123"}]
 
 def run_app():
     options = {
@@ -94,6 +74,9 @@ def run_app():
     }
     GunicornRuntimeApplication(app, options).run()
 
+
 if __name__ == "__main__":
     # run_app()
+
     uvicorn.run(app, host="0.0.0.0", port=APP_PORT)
+    
