@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-10T10:07:02.692Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36" etag="v4Yyyo6sVEYWVEOyKokT" version="17.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T13:18:14.603Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36" etag="Gs4SC49MQ1qz2pPxOG3c" version="17.4.5" type="github">
   <diagram id="SfHHLpiwJr73_0ugCJFA" name="Page-1">
-    <mxGraphModel dx="1426" dy="1204" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1018" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -75,6 +75,45 @@
         </mxCell>
         <mxCell id="HXpjKARE5DErHcW23QTs-36" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" parent="1" vertex="1">
           <mxGeometry x="463" y="640" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-1" target="jfwE3hBXCl0OuWNO--gO-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-1" value="&lt;span&gt;Scraper&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="970" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-2" target="jfwE3hBXCl0OuWNO--gO-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-2" value="&lt;span&gt;Cron Component&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="970" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-4" target="jfwE3hBXCl0OuWNO--gO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-4" value="&lt;span&gt;Search Frontend&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="830" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-5" target="jfwE3hBXCl0OuWNO--gO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-5" value="&lt;span&gt;Search API&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="830" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-7" target="jfwE3hBXCl0OuWNO--gO-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-7" value="&lt;span&gt;Index API&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="830" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jfwE3hBXCl0OuWNO--gO-8" target="jfwE3hBXCl0OuWNO--gO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-8" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Service_Bus.svg;" vertex="1" parent="1">
+          <mxGeometry x="465" y="985" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jfwE3hBXCl0OuWNO--gO-12" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="620" y="835" width="60" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
