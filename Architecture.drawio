@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-25T07:32:28.956Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="QSiDrSAAGWSV5oQNj4zj" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-25T18:01:26.680Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="sfw_MSb0RDxyaxKcHQW6" version="17.4.6" type="github">
   <diagram id="SfHHLpiwJr73_0ugCJFA" name="Page-1">
-    <mxGraphModel dx="1018" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1845" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -114,6 +114,35 @@
         </mxCell>
         <mxCell id="jfwE3hBXCl0OuWNO--gO-12" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" parent="1" vertex="1">
           <mxGeometry x="620" y="835" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-1" value="&lt;b&gt;User Stories&lt;/b&gt;&lt;br&gt;As a user I want to get a recommended time to charge based on either costs or sustainability&lt;br&gt;As a user I want to get a recommended charger based on location&lt;br&gt;&lt;br&gt;optional:&lt;br&gt;- show reduced costs or improved sustainability compared to different time" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="1145" width="510" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-2" value="Location --&amp;gt; build index" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="1260" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="25js9pC19ZkODiDYw02D-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-3" value="Cost vs Sustainability --&amp;gt; Classify Intent" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="1290" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-4" value="Query predict cost or sustainability --&amp;gt; use that as filter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="1360" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-6" value="Datetime, price, sustainability, charger_id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1290" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-7" value="Datetime, price, sustainability, charger_id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1360" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-8" value="Final query --&amp;gt; SELECT * FROM chargers WHERE ids IN [IDS] ORDER BY (price OR sustainability)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1440" width="550" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="25js9pC19ZkODiDYw02D-9" value="IDS = best matched index" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="65" y="1470" width="150" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
